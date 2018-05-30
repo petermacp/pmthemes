@@ -3,7 +3,8 @@
 #' \code{theme_preslight} applies custom theme to ggplot objects.
 #' 
 #' This is a custom function to apply a opinionated theme to ggplot
-#' objects destinated for projected scientific presentations
+#' objects destinated for scientific presentations with a light
+#' background
 #' @inheritParams ggplot2::theme_minimal
 #' @export
 #' @family themes
