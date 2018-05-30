@@ -1,0 +1,9 @@
+Package: pmthemes
+Version: 0.0.0.9000
+Title: Opinionated Themes for Scientific Reports
+Description: Applies consistent, opinionated themes for scientific reports
+Authors@R: person("Peter", "MacPherson", email = "petermacp@gmail.com", role = c("aut", "cre"))
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
