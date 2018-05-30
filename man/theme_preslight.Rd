@@ -11,5 +11,9 @@ theme_preslight(...)
 }
 \details{
 This is a custom function to apply a opinionated theme to ggplot
-objects destinated for projected scientific presentations
+objects destinated for scientific presentations with a light
+background
+}
+\seealso{
+Other themes: \code{\link{theme_presdark}}
 }
