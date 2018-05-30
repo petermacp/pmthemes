@@ -18,7 +18,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-home">
+    <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -55,23 +55,28 @@
 
       
       </header><div class="row">
-  <div class="contents col-md-9">
-    <div id="pmthemes" class="section level1">
+  <div class="col-md-9 contents">
+    
+
+    
+    
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<div id="pmthemes" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#pmthemes" class="anchor"></a>pmthemes</h1></div>
 <p>This is a small package containing functions for producing consistent documents and figures for scientific reports.</p>
-<p>To install the <code>pmthemes</code> package:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"petermacp/pmthemes"</span>)</code></pre></div>
+<div id="installation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h2>
+<p>You can install pmthemes from github with:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("devtools")</span>
+devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"petermacp/pmthemes"</span>)</code></pre></div>
+</div>
 <div id="themes-for-presentations" class="section level2">
 <h2 class="hasAnchor">
 <a href="#themes-for-presentations" class="anchor"></a>Themes for presentations</h2>
 <p>These themes are intended to be applied to figures that will be projected, for example using PowerPoint or Keynote.</p>
-<p>These are opinionated themes. By default:</p>
-<ul>
-<li>Font sizes are large to aid comprehension when projected</li>
-<li>Sans-serif font is used (Gill sans)</li>
-<li>y-axis text is rotated (to avoid readers having to turn their heads!)</li>
-</ul>
+<p>These are opinionated themes. By default: - Font sizes are large to aid comprehension when projected - Sans-serif font is used (Gill sans) - y-axis text is rotated (to avoid readers having to turn their heads!)</p>
 <div id="theme-for-light-background-presentations" class="section level3">
 <h3 class="hasAnchor">
 <a href="#theme-for-light-background-presentations" class="anchor"></a>Theme for light-background presentations</h3>
@@ -80,9 +85,8 @@
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(pmthemes)
 
-<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(mtcars) 
-<span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(mpg, wt), <span class="dt">colour=</span><span class="st">"darkred"</span>) 
-<span class="op">+</span><span class="st"> </span>pmthemes<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/pmthemes/topics/theme_preslight">theme_preslight</a></span>()</code></pre></div>
+<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(mtcars) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(mpg, wt), <span class="dt">colour=</span><span class="st">"darkred"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="reference/theme_preslight.html">theme_preslight</a></span>()</code></pre></div>
+<p><img src="../../R%20Templates/pmthemes/README-unnamed-chunk-2-1.png" width="700"></p>
 </div>
 <div id="theme-for-dark-background-presentations" class="section level3">
 <h3 class="hasAnchor">
@@ -92,19 +96,18 @@
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(pmthemes)
 
-<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(mtcars) 
-<span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(mpg, wt), <span class="dt">colour=</span><span class="st">"darkred"</span>) 
-<span class="op">+</span><span class="st"> </span>pmthemes<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/pmthemes/topics/theme_presdark">theme_presdark</a></span>()</code></pre></div>
+<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(mtcars) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(mpg, wt), <span class="dt">colour=</span><span class="st">"darkred"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="reference/theme_presdark.html">theme_presdark</a></span>()</code></pre></div>
+<p><img src="../../R%20Templates/pmthemes/README-unnamed-chunk-3-1.png" width="700"></p>
 </div>
 </div>
 </div>
   </div>
 
-  <div class="col-md-3" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
-<li>Report a bug at <br><a href="NA">NA</a>
+<li>Report a bug at <br><a href="https://github.com/petermacp/pmthemes/issues">https://​github.com/​petermacp/​pmthemes/​issues</a>
 </li>
 </ul>
 </div>
@@ -123,7 +126,8 @@
 </ul>
 </div>
 
-  </div>
+      </div>
+
 </div>
 
 

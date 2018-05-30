@@ -4,6 +4,8 @@ Title: Opinionated Themes for Scientific Reports
 Description: Applies consistent, opinionated themes for scientific reports
 Authors@R: person("Peter", "MacPherson", email = "petermacp@gmail.com", role = c("aut", "cre"))
 License: MIT + file LICENSE
+BugReports: https://github.com/petermacp/pmthemes/issues
+URL: https://petermacp.github.io/pmthemes
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
