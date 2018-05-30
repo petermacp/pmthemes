@@ -4,6 +4,9 @@
 #' 
 #' This is a custom function to apply a opinionated theme to ggplot
 #' objects destinated for projected scientific presentations
+#' @inheritParams ggplot2::theme_minimal
+#' @export
+#' @family themes
 
 
 theme_preslight <- function(...) {

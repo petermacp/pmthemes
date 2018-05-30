@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_preslight.R
 \name{theme_preslight}
 \alias{theme_preslight}
-\title{Theme for light presenttions.}
+\title{Theme for light-background presentions.}
 \usage{
 theme_preslight(...)
 }
