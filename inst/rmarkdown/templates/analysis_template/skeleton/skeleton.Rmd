@@ -1,14 +1,19 @@
 ---
 title: "PROJECT TITLE HERE"
+
+subtitle: "WHAT THIS FILE DOES HERE"
+
 author: |
   | Peter MacPherson
+  |
   | Liverpool School of Tropical Medicine, Liverpool, UK
   | Malawi-Liverpool-Wellcome Clinical Research Programme, Blantyre, Malawi
+  |
 
-date: '`r format(Sys.time(), "%B %d, %Y")`'
-
-abstract: "ABSTRACT HERE"
-
+date: | 
+  | `r format(Sys.time(), "%B %d, %Y")`
+  |
+  | Table of Contents:
 output: 
   html_document:
     theme: cosmo

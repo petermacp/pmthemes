@@ -1,0 +1,6 @@
+---
+name: Analysis report
+description: >
+  R Markdown template for scientific analysis reports
+create_dir: false
+---
