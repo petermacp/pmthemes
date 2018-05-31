@@ -32,7 +32,7 @@ These are opinionated themes. By default: - Font sizes are large to aid comprehe
 library(ggplot2)
 library(pmthemes)
 
-ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + theme_preslight()
+ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + theme_preslight() + labs(title = "This is a test graph", subtitle = "Showing the preslight theme")
 ```
 
 ![](README-unnamed-chunk-2-1.png)
@@ -47,17 +47,20 @@ ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + theme_preslight()
 library(ggplot2)
 library(pmthemes)
 
-ggplot(mtcars) + geom_point(aes(mpg, wt), colour="yellow") + theme_presdark() +
-#don't run code after this. Only to demonstrate dark background
-      theme(plot.background = element_rect(fill = "darkblue", colour = NA), 
-      panel.background = element_rect(fill = "darkblue", colour = NA))
+ggplot(mtcars) + geom_point(aes(mpg, wt), colour="yellow") + 
+  theme_presdark() + 
+  labs(title = "This is a test graph", subtitle = "Showing the presdark theme") +
+#don't run code after this. 
+#Only to demonstrate dark background
+  theme(plot.background = element_rect(fill = "midnightblue", colour = NA),
+        panel.background = element_rect(fill = "midnightblue", colour = NA))
 ```
 
 ![](README-unnamed-chunk-3-1.png) <br>
 
 ### Theme for figures in Word Documents
 
-`theme_wordfig()` is used to format `ggplot` objects destined for inclusion in a word processing document (e.g. a scientific manuscript.
+`theme_wordfig()` is used to format `ggplot` objects destined for inclusion in a word processing document (e.g. a scientific manuscript).
 
 *Example:*
 
@@ -65,7 +68,7 @@ ggplot(mtcars) + geom_point(aes(mpg, wt), colour="yellow") + theme_presdark() +
 library(ggplot2)
 library(pmthemes)
 
-ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + theme_wordfig()
+ggplot(mtcars) + geom_point(aes(mpg, wt), colour="black") + theme_wordfig() + labs(title = "This is a test graph", subtitle = "Showing the wordfig theme")
 ```
 
 ![](README-unnamed-chunk-4-1.png)
