@@ -85,7 +85,10 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(pmthemes)
 
-<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(mtcars) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(mpg, wt), <span class="dt">colour=</span><span class="st">"darkred"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="reference/theme_preslight.html">theme_preslight</a></span>()</code></pre></div>
+<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(mtcars) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(mpg, wt), <span class="dt">colour=</span><span class="st">"darkred"</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw"><a href="reference/theme_preslight.html">theme_preslight</a></span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">labs</a></span>(<span class="dt">title =</span> <span class="st">"This is a test graph"</span>, 
+       <span class="dt">subtitle =</span> <span class="st">"Showing theme_preslight"</span>)</code></pre></div>
 <p><img src="../../R%20Templates/pmthemes/README-unnamed-chunk-2-1.png" width="700"></p>
 </div>
 <div id="theme-for-dark-background-presentations" class="section level3">
@@ -96,8 +99,35 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(pmthemes)
 
-<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(mtcars) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(mpg, wt), <span class="dt">colour=</span><span class="st">"darkred"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="reference/theme_presdark.html">theme_presdark</a></span>()</code></pre></div>
-<p><img src="../../R%20Templates/pmthemes/README-unnamed-chunk-3-1.png" width="700"></p>
+<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(mtcars) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(mpg, wt), <span class="dt">colour=</span><span class="st">"yellow"</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw"><a href="reference/theme_presdark.html">theme_presdark</a></span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">labs</a></span>(<span class="dt">title =</span> <span class="st">"This is a test graph"</span>, <span class="dt">subtitle =</span> <span class="st">"Showing theme_presdark"</span>) <span class="op">+</span>
+<span class="co">#don't run code after this. </span>
+<span class="co">#Only to demonstrate dark background</span>
+<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/theme">theme</a></span>(<span class="dt">plot.background =</span> <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/element">element_rect</a></span>(<span class="dt">fill =</span> <span class="st">"midnightblue"</span>, <span class="dt">colour =</span> <span class="ot">NA</span>),
+        <span class="dt">panel.background =</span> <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/element">element_rect</a></span>(<span class="dt">fill =</span> <span class="st">"midnightblue"</span>, <span class="dt">colour =</span> <span class="ot">NA</span>))</code></pre></div>
+<p><img src="../../R%20Templates/pmthemes/README-unnamed-chunk-3-1.png" width="700"><br></p>
+</div>
+<div id="theme-for-figures-in-word-documents" class="section level3">
+<h3 class="hasAnchor">
+<a href="#theme-for-figures-in-word-documents" class="anchor"></a>Theme for figures in Word Documents</h3>
+<p><code><a href="reference/theme_wordfig.html">theme_wordfig()</a></code> is used to format <code>ggplot</code> objects destined for inclusion in a word processing document (e.g. a scientific manuscript).</p>
+<p><em>Example:</em></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">library</span>(pmthemes)
+
+<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(mtcars) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(mpg, wt), <span class="dt">colour=</span><span class="st">"black"</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw"><a href="reference/theme_wordfig.html">theme_wordfig</a></span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/labs">labs</a></span>(<span class="dt">title =</span> <span class="st">"This is a test graph"</span>, 
+       <span class="dt">subtitle =</span> <span class="st">"Showing theme_wordfig"</span>)</code></pre></div>
+<p><img src="../../R%20Templates/pmthemes/README-unnamed-chunk-4-1.png" width="700"></p>
+</div>
+<div id="r-markdown-template" class="section level3">
+<h3 class="hasAnchor">
+<a href="#r-markdown-template" class="anchor"></a>R Markdown template</h3>
+<p>The <code>pmthemes</code> package will additionally install an R Markdown template for writing scientific analysis report.</p>
+<p>To use the package, run: <code>library(pmthemes)</code>, then <code>File/New File/R Markdown/From template</code>. Then click on the <code>Analysis template</code> file to open a new R Markdown document.</p>
+<p>You will need to modify the yaml header to provide your own information.</p>
 </div>
 </div>
 </div>
