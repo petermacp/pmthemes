@@ -16,6 +16,7 @@ theme_presdark <- function(...) {
       text = element_text(family = "Gill Sans", color = "#f5f5f5", size=16),
       plot.subtitle = element_text(size=rel(0.8), face = "italic"),
       plot.caption = element_text(size=rel(0.5), face = "italic"),
+      axis.text = element_text(colour = "#f5f5f5"),
       axis.line.x = element_line(size = 0.2, colour = "#f5f5f5"),
       axis.line.y = element_line(size = 0.2, colour = "#f5f5f5"),
       axis.ticks = element_line(size=0.2, colour = "#f5f5f5"),

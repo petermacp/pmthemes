@@ -2,6 +2,7 @@
 
 export(theme_presdark)
 export(theme_preslight)
+export(theme_wordfig)
 import(assertthat)
 import(colorspace)
 import(ggplot2)

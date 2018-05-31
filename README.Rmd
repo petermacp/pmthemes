@@ -60,7 +60,31 @@ ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + theme_preslight()
 library(ggplot2)
 library(pmthemes)
 
-ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + theme_presdark()
+ggplot(mtcars) + geom_point(aes(mpg, wt), colour="yellow") + theme_presdark() +
+#don't run code after this. Only to demonstrate dark background
+      theme(plot.background = element_rect(fill = "darkblue", colour = NA), 
+      panel.background = element_rect(fill = "darkblue", colour = NA))
 
 ```
+<br>
 
+### Theme for figures in Word Documents
+
+`theme_wordfig()` is used to format `ggplot` objects destined for inclusion in a word processing document (e.g. a scientific manuscript). 
+
+*Example:*
+
+```{r}
+library(ggplot2)
+library(pmthemes)
+
+ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + theme_wordfig()
+```
+
+### R Markdown template
+
+The `pmthemes` package will additionally install an R Markdown template for writing scientific analysis report. 
+
+To use the package, run: `library(pmthemes)`, then `File/New File/R Markdown/From template`. Then click on the `Analysis template` file to open a new R Markdown document.
+
+You will need to modify the yaml header to provide your own information.

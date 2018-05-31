@@ -15,5 +15,6 @@ objects destinated for scientific presentations with a dark
 background
 }
 \seealso{
-Other themes: \code{\link{theme_preslight}}
+Other themes: \code{\link{theme_preslight}},
+  \code{\link{theme_wordfig}}
 }
