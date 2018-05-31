@@ -32,7 +32,10 @@ These are opinionated themes. By default: - Font sizes are large to aid comprehe
 library(ggplot2)
 library(pmthemes)
 
-ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + theme_preslight() + labs(title = "This is a test graph", subtitle = "Showing the preslight theme")
+ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + 
+  theme_preslight() + 
+  labs(title = "This is a test graph", 
+       subtitle = "Showing theme_preslight")
 ```
 
 ![](README-unnamed-chunk-2-1.png)
@@ -49,7 +52,7 @@ library(pmthemes)
 
 ggplot(mtcars) + geom_point(aes(mpg, wt), colour="yellow") + 
   theme_presdark() + 
-  labs(title = "This is a test graph", subtitle = "Showing the presdark theme") +
+  labs(title = "This is a test graph", subtitle = "Showing theme_presdark") +
 #don't run code after this. 
 #Only to demonstrate dark background
   theme(plot.background = element_rect(fill = "midnightblue", colour = NA),
@@ -68,7 +71,10 @@ ggplot(mtcars) + geom_point(aes(mpg, wt), colour="yellow") +
 library(ggplot2)
 library(pmthemes)
 
-ggplot(mtcars) + geom_point(aes(mpg, wt), colour="black") + theme_wordfig() + labs(title = "This is a test graph", subtitle = "Showing the wordfig theme")
+ggplot(mtcars) + geom_point(aes(mpg, wt), colour="black") + 
+  theme_wordfig() + 
+  labs(title = "This is a test graph", 
+       subtitle = "Showing theme_wordfig")
 ```
 
 ![](README-unnamed-chunk-4-1.png)
