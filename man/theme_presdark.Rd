@@ -18,3 +18,4 @@ background
 Other themes: \code{\link{theme_preslight}},
   \code{\link{theme_wordfig}}
 }
+\concept{themes}

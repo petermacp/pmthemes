@@ -18,3 +18,4 @@ background
 Other themes: \code{\link{theme_presdark}},
   \code{\link{theme_wordfig}}
 }
+\concept{themes}

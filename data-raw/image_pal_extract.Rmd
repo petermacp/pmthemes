@@ -1,0 +1,119 @@
+---
+title: "PMTHEMES"
+
+subtitle: "Extract colour palettes from images"
+
+author: |
+  | Peter MacPherson
+  |
+  | Liverpool School of Tropical Medicine, Liverpool, UK
+  | Malawi-Liverpool-Wellcome Clinical Research Programme, Blantyre, Malawi
+  |
+
+date: | 
+  | `r format(Sys.time(), "%B %d, %Y")`
+  |
+  | Table of Contents:
+output: 
+  html_document:
+    theme: cosmo
+    highlight: espresso
+    toc: true
+---
+
+<br>
+
+## 1. Backgound
+
+
+<br>
+
+## 2. Set-up
+
+Load all required packages for analysis.
+
+```{r setup, echo=FALSE, include=FALSE, message=FALSE, comment=NA, warning=FALSE}
+library(tidyverse)    #for data manipulation
+library(jpeg)
+library(scales)
+library(usethis)
+
+```
+
+<br>
+
+## 3. Import images
+
+Import all images.
+
+```{r import}
+file.list <- list.files(pattern='*.jpg')
+images <- suppressMessages(map(file.list, ~ readJPEG(.)))
+names(images) <- gsub("\\.jpg", "", file.list)
+
+list2env(images,envir=.GlobalEnv)
+
+```
+
+<br>
+
+## 4. Use K-means clustering to extract palettes from images.
+
+Reference: http://www.milanor.net/blog/build-color-palette-from-image-with-paletter/
+
+```{r tidy}
+set.seed(42)
+
+extract_pal <- function(image){
+dimension    <- dim(image)
+image_rgb <- data.frame(
+  x = rep(1:dimension[2], each = dimension[1]),
+  y = rep(dimension[1]:1, dimension[2]),
+  R = as.vector(image[,,1]), #slicing our array into three
+  G = as.vector(image[,,2]),
+  B = as.vector(image[,,3])
+)
+
+k_means <- kmeans(image_rgb[,c("R","G","B")], centers = 20, iter.max = 30)
+
+}
+
+list <- list(aberdeen=aberdeen, 
+             cornwall=cornwall, 
+             harrogate=harrogate, 
+             penzance=penzance,
+             somerset=somerset, 
+             wales=wales, 
+             yorkshirecoast=yorkshirecoast)
+
+out <- map(list, ~extract_pal(.))
+
+railpalettes <- map(out, ~ as_tibble(pluck(.,"centers")))
+
+map(railpalettes, ~ show_col(rgb(.)))
+
+use_data(railpalettes, overwrite = TRUE)
+
+```
+
+
+<br>
+
+## 5. Reproducibility
+
+This reproduction of the analysis was run by: 
+
+```{r sysinfo, echo=FALSE, message=FALSE, comment=NA, warning=FALSE}
+
+sysinfo <- Sys.info()
+
+sysinfo <- data.frame(keyName=names(sysinfo), value=sysinfo, row.names=NULL)
+
+sysinfo %>% kable()
+```
+
+Analysis was run at **`r Sys.time()`**, and using the following Session Info:
+
+```{r sessioninfo, echo=FALSE, results='markdown', message=FALSE, comment=NA, warning=FALSE}
+sessionInfo()
+```
