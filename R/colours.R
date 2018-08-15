@@ -35,7 +35,7 @@
 rail_palettes <- list(
   ## Aberdeen
   ## https://railwayposters.co.uk/product/art-prints/17420/aberdeen
-  aberdeen_d = c(
+  aberdeen = c(
     "#A09C31",	
     "#A09C31",
     "#7199B0",	
@@ -48,7 +48,7 @@ rail_palettes <- list(
   
   ## Cornwall
   ## https://shop.actionposters.co.uk/vintage-british-rail-cornish-coast-railway-poster-a3-print-21318-p.asp
-  cornwall_d = c(
+  cornwall = c(
     "#674A49",	
     "#3C2B4E",
     "#E5DB98",	
@@ -61,7 +61,7 @@ rail_palettes <- list(
 
   ## Harrogate
   ## https://shop.actionposters.co.uk/vintage-british-rail-cornish-coast-railway-poster-a3-print-21318-p.asp
-  harrogate_d = c(
+  harrogate = c(
     "#AC362B",	
     "#A5936F",
     "#37302F",	
@@ -69,12 +69,12 @@ rail_palettes <- list(
     "#565958",
     "#DCAF97",
     "#683F28",
-    "#OF2138"
+    "#0F2138"
   ),
   
   ## Penzance
   ## https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjdgvbrmJzcAhVFsBQKHY1WBvUQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pinterest.com%2Fcook1940town%2Fenglanduk-railway-posters%2F&psig=AOvVaw3DGSgezGH-k-cgO-OgX7Xi&ust=1531575326238595
-  penzance_d = c(
+  penzance = c(
     "#F26B07",	
     "#D7B554",
     "#78C9D1",	
@@ -87,7 +87,7 @@ rail_palettes <- list(
   
   ## Somerset
   ## https://railwayposters.co.uk/product/art-prints/17222/railway-poster-somerset
-  somerset_d = c(
+  somerset = c(
     "#3B4846",	
     "#E19B3F",
     "#54443D",	
@@ -100,7 +100,7 @@ rail_palettes <- list(
   
   ## Wales
   ## https://railwayposters.co.uk/product/art-prints/17336/railway-poster-wales
-  wales_d = c(
+  wales = c(
     "#706973",	
     "#D9D0B8",
     "#8290A3",	
@@ -113,7 +113,7 @@ rail_palettes <- list(
   
   ## Yorkshire Coast
   ## https://railwayposters.co.uk/product/art-prints/16799/the-yorkshire-coast-2
-  yorkshirecoast_d = c(
+  yorkshirecoast = c(
     "#E2E7D3",	
     "#837032",
     "#5C655C",	

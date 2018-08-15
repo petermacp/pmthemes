@@ -15,7 +15,7 @@
 #' @export
 #'
 rail_pal <- function(palette="aberdeen", alpha = 1, reverse = FALSE) {
-  pal <- rail[[palette]]
+  pal <- rail_palettes[[palette]]
   if (reverse){
     pal <- rev(pal)
   }
