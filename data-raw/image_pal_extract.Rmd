@@ -37,6 +37,7 @@ library(tidyverse)    #for data manipulation
 library(jpeg)
 library(scales)
 library(usethis)
+library(knitr)
 
 ```
 
@@ -91,6 +92,39 @@ out <- map(list, ~extract_pal(.))
 railpalettes <- map(out, ~ as_tibble(pluck(.,"centers")))
 
 map(railpalettes, ~ show_col(rgb(.)))
+
+railpalettes <- map(railpalettes, ~ rgb(.))
+
+dropcols <- c("#D2D0CA", "#C8A26D", "#D2C3A2", "F7E5BB", "#4A2E1E", "#607D8A", "#947960",
+              "#EFE8DA", "#F5DAA2", "E9C27E",
+              
+              "#F6F8FA", "#E5DB98", "#2A193C", "#E5DB98", "#CCDADE", "#B6D0CB", "#EAE4C6",
+            
+              
+              "#F0F0EF", "#DCAF97", "#D3D6D8", "#665644", "#6D6D68", "##827F77",
+              "#E1E3E3", "#B7BCBF", "#949B9C", "#BF4136", "#FEFEFE",
+              
+              "#78C9D1", "#3BBFD0", "#CED6DO", "#C9B67E", "#669A39", "#EFECD7",
+              "#C5CAC2",
+              
+              "E1DECB", "#F8F5E1", "#E7C581", "#D9AD62", "#FFFFFF", "#957153",
+              "#A6876D", "#855338", "#342A2B", "#435978", "#CD9553", "#BA8744",
+              
+              "#FEFEFE", "#D9D0B8", "#8290A3", "#6E7C95", "#9AA7B6", "AAB9D6",
+              "#2E3C32", "#4D4D6D", "#545A4F", "#BECBE5", "#ABAC90", "#E4E0DF",
+              "#868779",
+              
+              "#E2E7D3", "#FEFFFE", "#A5904F", "#A6A884", "#E8E4B9", "#CEE0E2",
+              "#D2D7C3", "#CBCCAC", "#EEDF2E3", "#A9BEBE", "#C0D1D1", "#C2B964"
+              
+              )
+
+railpalettes <- map(railpalettes, ~ purrr::discard(.x, ~ .x %in% dropcols))
+
+railpalettes
+  
+
+#Remove some very light colours (not useful for plotting)
 
 use_data(railpalettes, overwrite = TRUE)
 
