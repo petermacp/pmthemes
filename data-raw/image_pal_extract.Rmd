@@ -95,33 +95,32 @@ map(railpalettes, ~ show_col(rgb(.)))
 
 railpalettes <- map(railpalettes, ~ rgb(.))
 
-dropcols <- c("#D2D0CA", "#C8A26D", "#D2C3A2", "F7E5BB", "#4A2E1E", "#607D8A", "#947960",
-              "#EFE8DA", "#F5DAA2", "E9C27E",
+keepcols <- c("#7A5532", "#729BB2", "#BA1A14", "#A69D91", "#A09E30", "#554D54",
+              "#F7E5BB", "#180D0D", "#B0B4B7", "#195C91", "#E9C27E", "#E1A93B",
               
-              "#F6F8FA", "#E5DB98", "#2A193C", "#E5DB98", "#CCDADE", "#B6D0CB", "#EAE4C6",
-            
-              
-              "#F0F0EF", "#DCAF97", "#D3D6D8", "#665644", "#6D6D68", "##827F77",
-              "#E1E3E3", "#B7BCBF", "#949B9C", "#BF4136", "#FEFEFE",
-              
-              "#78C9D1", "#3BBFD0", "#CED6DO", "#C9B67E", "#669A39", "#EFECD7",
-              "#C5CAC2",
-              
-              "E1DECB", "#F8F5E1", "#E7C581", "#D9AD62", "#FFFFFF", "#957153",
-              "#A6876D", "#855338", "#342A2B", "#435978", "#CD9553", "#BA8744",
-              
-              "#FEFEFE", "#D9D0B8", "#8290A3", "#6E7C95", "#9AA7B6", "AAB9D6",
-              "#2E3C32", "#4D4D6D", "#545A4F", "#BECBE5", "#ABAC90", "#E4E0DF",
-              "#868779",
-              
-              "#E2E7D3", "#FEFFFE", "#A5904F", "#A6A884", "#E8E4B9", "#CEE0E2",
-              "#D2D7C3", "#CBCCAC", "#EEDF2E3", "#A9BEBE", "#C0D1D1", "#C2B964"
+             "#674A49", "#3C2B4E", "#BEA899", "#CB9A6A", "#140D31",
+             "#756E63", "#5B2731", "#D7CB76", "#AF7B57", "#9DBFB9", "#935945",
+             "#8AA5A9", "#8B8F6A",
+             
+             "#AC362B", "#A5936F", "#37302F", "#C6715C", "#565958", "#683F28",
+             "#827F77", "#080C1D", "#04050D", "#0F2138",
+             
+             "#BCBEBC", "#E1DECB", "#E19B3F", "#3B4864", "#1D1E22", "#B56A35",
+             "#54443D", "#CCAA44", "#6D7473",
+             
+             "#706973", "#4240C0", "#1C2421", "#252D41", "#AAB9D6", "#C2CAA2",
+             "#989B86", "#35375D",
+             
+             "#837032", "#5C655C", "#486791", "#1F2C22", "#3C4142", "#EBD48E",
+             "#8DA6B1", "#7A837E"
               
               )
 
-railpalettes <- map(railpalettes, ~ purrr::discard(.x, ~ .x %in% dropcols))
+railpalettes <- map(railpalettes, ~ purrr::keep(.x, ~ .x %in% keepcols))
 
 railpalettes
+
+
   
 
 #Remove some very light colours (not useful for plotting)
