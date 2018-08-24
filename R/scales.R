@@ -1,4 +1,4 @@
-#' rail palette with ramped colours
+#' rail palette
 #'
 #' @param palette Choose from 'rail_palettes' list
 #'
@@ -7,10 +7,10 @@
 #' @param reverse If TRUE, the direction of the colours is reversed.
 #'
 #' @examples
-#' library(scales)
-#' show_col(rail_pal("aberdeen")(8))
-#'
-#' filled.contour(volcano,color.palette = rail_pal("wales"), asp=1)
+#' library(tidyverse)
+#' ggplot(data = diamonds) +
+#' geom_bar(mapping = aes(x = cut, fill = cut)) 
+#' + theme_wordfig() + scale_fill_rail(palette="aberdeen")
 #'
 #' @export
 #'
@@ -41,18 +41,15 @@ rail_pal <- function(palette="aberdeen", alpha = 1, reverse = FALSE) {
 #' @importFrom ggplot2 scale_colour_manual
 #'
 #' @examples
-#' library(ggplot2)
-#' ggplot(mtcars, aes(mpg, wt)) +
-#'   geom_point(aes(colour = factor(cyl)), size = 4) +
-#'   scale_colour_rail()
-#' ggplot(mtcars, aes(mpg, wt)) +
-#'   geom_point(aes(colour = hp)) +
-#'   scale_colour_rail(palette="aberdeen", discrete = FALSE)
-#' ggplot(data = mpg) +
-#'   geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
-#'   scale_colour_rail(palette="harrogate")
-#' ggplot(diamonds) + geom_bar(aes(x = cut, fill = clarity)) +
-#'   scale_fill_rail(palette = "penzance")
+#' library(tidyverse)
+#' ggplot(data = diamonds) +
+#' geom_bar(mapping = aes(x = cut, fill = cut)) 
+#' + theme_wordfig() + scale_fill_rail(palette="aberdeen")
+#'
+#' library(tidyverse)
+#' ggplot(data = diamonds) +
+#' geom_bar(mapping = aes(x = cut, fill = cut)) 
+#' + theme_wordfig() + scale_fill_rail(palette="aberdeen")
 #' @export
 #'
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn

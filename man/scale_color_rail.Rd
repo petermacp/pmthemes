@@ -26,16 +26,13 @@ scale_colour_rail(..., palette = "aberdeen", discrete = TRUE,
 Setup colour palette for ggplot2
 }
 \examples{
-library(ggplot2)
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point(aes(colour = factor(cyl)), size = 4) +
-  scale_colour_rail()
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point(aes(colour = hp)) +
-  scale_colour_rail(palette="aberdeen", discrete = FALSE)
-ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
-  scale_colour_rail(palette="harrogate")
-ggplot(diamonds) + geom_bar(aes(x = cut, fill = clarity)) +
-  scale_fill_rail(palette = "penzance")
+library(tidyverse)
+ggplot(data = diamonds) +
+geom_bar(mapping = aes(x = cut, fill = cut)) 
++ theme_wordfig() + scale_fill_rail(palette="aberdeen")
+
+library(tidyverse)
+ggplot(data = diamonds) +
+geom_bar(mapping = aes(x = cut, fill = cut)) 
++ theme_wordfig() + scale_fill_rail(palette="aberdeen")
 }

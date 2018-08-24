@@ -35,7 +35,7 @@ library(pmthemes)
 ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + 
   theme_preslight() + 
   labs(title = "This is a test graph", 
-       subtitle = "Showing theme_preslight")
+       subtitle = "Showing theme_preslight()")
 ```
 
 ![](README-unnamed-chunk-2-1.png)
@@ -52,7 +52,7 @@ library(pmthemes)
 
 ggplot(mtcars) + geom_point(aes(mpg, wt), colour="yellow") + 
   theme_presdark() + 
-  labs(title = "This is a test graph", subtitle = "Showing theme_presdark") +
+  labs(title = "This is a test graph", subtitle = "Showing theme_presdark()") +
 #don't run code after this. 
 #Only to demonstrate dark background
   theme(plot.background = element_rect(fill = "midnightblue", colour = NA),
@@ -74,10 +74,103 @@ library(pmthemes)
 ggplot(mtcars) + geom_point(aes(mpg, wt), colour="black") + 
   theme_wordfig() + 
   labs(title = "This is a test graph", 
-       subtitle = "Showing theme_wordfig")
+       subtitle = "Showing theme_wordfig()")
 ```
 
 ![](README-unnamed-chunk-4-1.png)
+
+### Vintage rail poster colour themes
+
+The `scale_colour_rail()` and `scale_fill_rail()` functions are used to define colour palettes for aesthetics specified in the scale name.
+
+Much of the code for extracting colour palettes from images using a k-means clustering images was taken from: <http://www.milanor.net/blog/build-color-palette-from-image-with-paletter/>
+
+There are seven different palettes, each based on a vintage british railway poster:
+
+### aberdeen
+
+![aberdeen](data-raw/aberdeen.jpg)
+
+<br>
+
+### cornwall
+
+![cornwall](data-raw/cornwall.jpg)
+
+<br>
+
+### harrogate
+
+![harrogate](data-raw/harrogate.jpg)
+
+<br>
+
+### penzance
+
+![penzance](data-raw/penzance.jpg)
+
+<br>
+
+### somerset
+
+![somerset](data-raw/somerset.jpg)
+
+<br>
+
+### wales
+
+![wales](data-raw/wales.jpg)
+
+<br>
+
+### yorkshirecoast
+
+![yorkshirecoast](data-raw/yorkshirecoast.jpg)
+
+Examples
+--------
+
+An example using the `cornwall` palette.
+
+``` r
+library(ggplot2)
+library(pmthemes)
+
+ggplot(data = diamonds) +
+  geom_bar(mapping = aes(x = cut, fill = cut)) + theme_wordfig() +
+  scale_fill_rail(palette="cornwall")
+```
+
+![](README-unnamed-chunk-5-1.png)
+
+<br>
+
+Here is the `harrogate` palette.
+
+``` r
+library(ggplot2)
+library(pmthemes)
+
+ggplot(data = diamonds) +
+  geom_bar(mapping = aes(x = cut, fill = cut)) + theme_wordfig() +
+  scale_fill_rail(palette="harrogate")
+```
+
+![](README-unnamed-chunk-6-1.png)
+
+<br>
+
+...and the `penzance` palette.
+
+``` r
+ggplot(data = diamonds) +
+  geom_bar(mapping = aes(x = cut, fill = cut)) + theme_wordfig() +
+  scale_fill_rail(palette="penzance")
+```
+
+![](README-unnamed-chunk-7-1.png)
+
+<br>
 
 ### R Markdown template
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/scales.R
 \name{rail_pal}
 \alias{rail_pal}
-\title{rail palette with ramped colours}
+\title{rail palette}
 \usage{
 rail_pal(palette = "aberdeen", alpha = 1, reverse = FALSE)
 }
@@ -14,12 +14,12 @@ rail_pal(palette = "aberdeen", alpha = 1, reverse = FALSE)
 \item{reverse}{If TRUE, the direction of the colours is reversed.}
 }
 \description{
-rail palette with ramped colours
+rail palette
 }
 \examples{
-library(scales)
-show_col(rail_pal("aberdeen")(8))
-
-filled.contour(volcano,color.palette = rail_pal("wales"), asp=1)
+library(tidyverse)
+ggplot(data = diamonds) +
+geom_bar(mapping = aes(x = cut, fill = cut)) 
++ theme_wordfig() + scale_fill_rail(palette="aberdeen")
 
 }
