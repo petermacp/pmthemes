@@ -49,50 +49,50 @@ Much of the code for extracting colour palettes from images using a
 k-means clustering images was taken from:
 <http://www.milanor.net/blog/build-color-palette-from-image-with-paletter/>
 
-There are seven different palettes, each based on a vintage british
+There are seven different palettes, each based on a vintage British
 railway poster:
 
-\#\#\#aberdeen
+### aberdeen
 
 ![aberdeen](data-raw/aberdeen.jpg)
 
 <br>
 
-\#\#\#cornwall
+### cornwall
 
 ![cornwall](data-raw/cornwall.jpg)
 
 <br>
 
-\#\#\#harrogate
+### harrogate
 
 ![harrogate](data-raw/harrogate.jpg)
 
 <br>
 
-\#\#\#penzance
+### penzance
 
 ![penzance](data-raw/penzance.jpg)
 
 <br>
 
-\#\#\#somerset
+### somerset
 
 ![somerset](data-raw/somerset.jpg)
 
 <br>
 
-\#\#\#wales
+### wales
 
 ![wales](data-raw/wales.jpg)
 
 <br>
 
-\#\#\#yorkshirecoast
+### yorkshirecoast
 
 ![yorkshirecoast](data-raw/yorkshirecoast.jpg)
 
-\#\#Examples
+## Examples
 
 An example using the `cornwall` palette.
 
