@@ -16,8 +16,8 @@ date: |
   | Table of Contents:
 output: 
   html_document:
-    theme: cosmo
-    highlight: espresso
+    df_print: paged
+    theme: spacelab
     toc: true
 ---
 
@@ -32,7 +32,7 @@ output:
 
 Load all required packages for analysis.
 
-```{r setup, echo=FALSE, include=FALSE, message=FALSE, comment=NA, warning=FALSE}
+```{r setup, message=FALSE}
 library(tidyverse)    #for data manipulation
 library(pmthemes)     #for ggplot themes
 library(knitr)        #for tables

@@ -4,8 +4,13 @@
 \alias{scale_fill_rail}
 \title{Setup fill palette for ggplot2}
 \usage{
-scale_fill_rail(..., palette = "aberdeen", discrete = TRUE,
-  alpha = 1, reverse = TRUE)
+scale_fill_rail(
+  ...,
+  palette = "aberdeen",
+  discrete = TRUE,
+  alpha = 1,
+  reverse = TRUE
+)
 }
 \arguments{
 \item{...}{additional arguments to pass to scale_color_gradientn}

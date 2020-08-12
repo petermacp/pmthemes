@@ -3,7 +3,6 @@
 \docType{package}
 \name{pmthemes}
 \alias{pmthemes}
-\alias{pmthemes-package}
 \title{pmthemes}
 \description{
 This package contains extra themes, scales, and geoms, and

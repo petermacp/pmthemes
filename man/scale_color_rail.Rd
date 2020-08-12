@@ -5,11 +5,21 @@
 \alias{scale_colour_rail}
 \title{Setup colour palette for ggplot2}
 \usage{
-scale_color_rail(..., palette = "aberdeen", discrete = TRUE,
-  alpha = 1, reverse = FALSE)
+scale_color_rail(
+  ...,
+  palette = "aberdeen",
+  discrete = TRUE,
+  alpha = 1,
+  reverse = FALSE
+)
 
-scale_colour_rail(..., palette = "aberdeen", discrete = TRUE,
-  alpha = 1, reverse = FALSE)
+scale_colour_rail(
+  ...,
+  palette = "aberdeen",
+  discrete = TRUE,
+  alpha = 1,
+  reverse = FALSE
+)
 }
 \arguments{
 \item{...}{additional arguments to pass to scale_color_gradientn}

@@ -1,5 +1,5 @@
 Package: pmthemes
-Version: 0.0.0.9000
+Version: 0.2.0
 Title: Opinionated Themes for Scientific Reports
 Description: Applies consistent, opinionated themes for scientific reports
 Authors@R: person("Peter", "MacPherson", email = "petermacp@gmail.com", role = c("aut", "cre"))
@@ -9,4 +9,4 @@ URL: https://petermacp.github.io/pmthemes
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
-RoxygenNote: 6.1.0
+RoxygenNote: 7.1.1

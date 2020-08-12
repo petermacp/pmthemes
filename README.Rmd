@@ -18,76 +18,33 @@ This is a small package containing functions for producing consistent documents 
 
 ## Installation
 
-You can install pmthemes from github with:
+You can install pmthemes() from github with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("petermacp/pmthemes")
 ```
 
+## Overall theme
 
-## Themes for presentations
-
-These themes are intended to be applied to figures that will be projected, for example using PowerPoint or Keynote.
-
-These are opinionated themes. By default:
- - Font sizes are large to aid comprehension when projected
- - Sans-serif font is used (Gill sans)
- - y-axis text is rotated (to avoid readers having to turn their heads!)
-
-### Theme for light-background presentations
-
-`theme_preslight()` is used to format `ggplot` objects destined for display in a scientific presentation with a light background. 
-
-*Example:*
+The `theme_pm()` function is the workhorse of the package, providing a simple theme for scientific presentations and documents.
 
 ```{r}
 library(ggplot2)
+library(palmerpenguins)
 library(pmthemes)
 
-ggplot(mtcars) + geom_point(aes(mpg, wt), colour="darkred") + 
-  theme_preslight() + 
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 2) +
+  facet_grid(~species) +
+  scale_color_manual(values = c("darkorange","darkorchid","cyan4"))  + 
   labs(title = "This is a test graph", 
-       subtitle = "Showing theme_preslight()")
-```
+       subtitle = "Showing theme_pm()",
+       caption = "Data from the palmerpenguins package") +
+  theme_pm()
 
-
-### Theme for dark-background presentations
-
-`theme_presdark()` is used to format `ggplot` objects destined for display in a scientific presentation with a dark background. 
-
-*Example:*
-
-
-```{r}
-library(ggplot2)
-library(pmthemes)
-
-ggplot(mtcars) + geom_point(aes(mpg, wt), colour="yellow") + 
-  theme_presdark() + 
-  labs(title = "This is a test graph", subtitle = "Showing theme_presdark()") +
-#don't run code after this. 
-#Only to demonstrate dark background
-  theme(plot.background = element_rect(fill = "midnightblue", colour = NA),
-        panel.background = element_rect(fill = "midnightblue", colour = NA))
-
-```
-<br>
-
-### Theme for figures in Word Documents
-
-`theme_wordfig()` is used to format `ggplot` objects destined for inclusion in a word processing document (e.g. a scientific manuscript). 
-
-*Example:*
-
-```{r}
-library(ggplot2)
-library(pmthemes)
-
-ggplot(mtcars) + geom_point(aes(mpg, wt), colour="black") + 
-  theme_wordfig() + 
-  labs(title = "This is a test graph", 
-       subtitle = "Showing theme_wordfig()")
 ```
 
 ### Vintage rail poster colour themes
@@ -147,7 +104,8 @@ library(ggplot2)
 library(pmthemes)
 
 ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, fill = cut)) + theme_wordfig() +
+  geom_bar(aes(x = cut, fill = cut)) + 
+  theme_pm() +
   scale_fill_rail(palette="cornwall")
 
 ```
@@ -161,7 +119,8 @@ library(ggplot2)
 library(pmthemes)
 
 ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, fill = cut)) + theme_wordfig() +
+  geom_bar(mapping = aes(x = cut, fill = cut)) + 
+  theme_pm() +
   scale_fill_rail(palette="harrogate")
 
 ```
@@ -173,7 +132,8 @@ ggplot(data = diamonds) +
 
 ```{r}
 ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, fill = cut)) + theme_wordfig() +
+  geom_bar(mapping = aes(x = cut, fill = cut)) + 
+  theme_pm() +
   scale_fill_rail(palette="penzance")
 
 ```
